@@ -41,8 +41,12 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
+.counter-wrap {
+    width: 100%;
+}
 .counter {
     display: flex;
     flex-direction: column;
@@ -83,4 +87,33 @@
     font-size: 32px;
     font-weight: 700;
     color: #333;
+}
+
+.total {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    font-weight: 600;
+    color: #777;
+}
+.sale-title {
+    /* display: block; */
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+}
+.sale-input {
+    width: 2rem;
+    height: 2rem;
+}
+.sale-toggle-btn {
+    font-size: 1.6rem;
+    padding: 0.4rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(55, 55, 55);
+    color: #fff;
+    border: 1px solid #f5f5f5;
 }
