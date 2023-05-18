@@ -2,27 +2,9 @@ import './App.css';
 import { Fragment } from 'react';
 
 function AppJSX() {
-    const name = '엘리';
-    const list = ['우유', '딸기', '바나나'];
     return (
         <Fragment>
-            <h1 className="orange">{`hello! ${name}`}</h1>
-            <h2>hello1223</h2>
-            <p>{name}</p>
-            <ul>
-                {/* 화살표 함수 */}
-                {list.map((item) => (
-                    <li>{item}</li>
-                ))}
-
-                {list.map((item) => {
-                    return <li>{item}</li>;
-                })}
-
-                {list.map(function (item) {
-                    return <li>{item}</li>;
-                })}
-            </ul>
+            <div></div>
         </Fragment>
     );
 }

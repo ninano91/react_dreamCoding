@@ -1,6 +1,6 @@
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import Counter from './components/Counter-0517-02';
+import Counter from './components/Counter';
 
 function AppCounter() {
     const [count, setCount] = useState(0);
