@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './components/App.css';
 import Products from './components/Products';
 
 export default function AppProducts() {

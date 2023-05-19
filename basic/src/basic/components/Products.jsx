@@ -11,7 +11,6 @@ export default function Products() {
             .then((res) => res.json())
             .then((data) => {
                 console.log('데이터를 네트워크에 주워옴🤖');
-
                 setProducts(data);
             });
         return () => {

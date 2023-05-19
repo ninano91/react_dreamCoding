@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import AppProducts from './basic/AppProducts';
+// import AppTheme from './AppTheme';
+// import AppMentorsButton from './AppMontorsButton';
+// import AppWrap from './AppWrap';
+// import AppForm from './AppForm';
 // import AppMentor from './AppMentor';
-import AppMentorsReducer from './AppMentorsReducer';
 // import AppXY from './AppXY';
+// import AppMentorsReducer from './AppMentorsReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppMentorsReducer />);
+root.render(<AppProducts />);
+// root.render(<AppMentorsButton />);
+// root.render(<AppTheme />);
+// root.render(<AppWrap />);
+// root.render(<AppForm />);
+// root.render(<AppMentorsReducer />);
 // root.render(<AppMentor />);
 // root.render(<AppXY />);
 
