@@ -1,0 +1,20 @@
+.gnb-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    z-index: 10;
+    /* background-color: #5555555f; */
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #1e2a66, #000 70%);
+    opacity: 0.95;
+}
+.gnb-wrap.on {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+}
