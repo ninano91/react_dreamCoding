@@ -1,3 +1,8 @@
+.gnb-btn-wrap {
+    display: flex;
+    margin-left: 60px;
+}
+
 .btn-menu {
     outline: none;
     z-index: 20;

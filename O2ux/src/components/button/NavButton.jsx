@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './NavButton.css';
-import GnbWrap from '../layout/GnbWrap';
+import GnbWrap from './../layout/GnbWrap';
 
 // 컴포넌트 내부에 함수를 불러서 실행할 경우,
 // 함수가 btn-menu 버튼의 click 이벤트에 대해 매번 등록되기 때문에
@@ -41,8 +41,11 @@ export default function NavButton() {
     }, []);
 
     return (
-        <button className="btn-menu">
-            <span>Menu</span>
-        </button>
+        <div className="gnb-btn-wrap">
+            <button className="btn-menu">
+                <span>Menu</span>
+            </button>
+            <GnbWrap />
+        </div>
     );
 }

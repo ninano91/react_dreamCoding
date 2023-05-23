@@ -45,11 +45,11 @@ export default function Navbar() {
     return (
         <nav>
             <div className="left">
-                <h2 className="main-logo">d</h2>
+                <h2 className="main-logo"></h2>
             </div>
             <div className="right">
-                <Link to="/Korean">kor</Link>
-                <Link to="/English">eng</Link>
+                <Link to="/Korean">Kor</Link>
+                <Link to="/English">Eng</Link>
                 <NavButton />
             </div>
         </nav>

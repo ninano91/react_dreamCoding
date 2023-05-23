@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Korean from './pages/Korean';
 import Root from './pages/Root';
-import Home from './pages/Home';
 import English from './pages/English';
 
 const router = createBrowserRouter([
@@ -16,7 +15,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home />,
+                element: <Korean />,
             },
             {
                 path: '/korean',

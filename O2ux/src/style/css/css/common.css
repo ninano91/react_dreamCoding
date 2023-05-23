@@ -119,8 +119,9 @@ body.scrolltop {
   height: 100%;
   color: #999;
   font-size: 16px;
-  padding: 0px 24px;
-  display: inline-block;
+  margin: 0px 24px;
+  display: flex;
+  align-items: center;
 }
 .content-wrap nav .right a.on {
   color: #6921e0;
@@ -130,7 +131,12 @@ body.scrolltop {
   display: inline-block;
   width: 2px;
   height: 20px;
+  margin-left: 24px;
+  margin-right: -24px;
   background-color: #999;
+}
+.content-wrap nav .right a + .btn-menu {
+  margin-left: 60px;
 }
 
 .gnb-wrap {
@@ -141,4 +147,177 @@ body.scrolltop {
 }
 .gnb-wrap.on {
   z-index: 1;
+}
+
+/* ------------------------------------------------------------
+햄버거 메뉴버튼 스타일
+------------------------------------------------------------ */
+/* ------------------------------------------------------------
+카드 리스트 스타일
+------------------------------------------------------------ */
+.list-area {
+  background-color: #fff;
+}
+
+.portfolio-card-list {
+  padding: 60px 40px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+.portfolio-card-list .port-folio-item:nth-child(2n) {
+  margin-top: 80px;
+  margin-left: 60px;
+}
+
+/* 
+아이템 스타일 지정
+*/
+.port-folio-item {
+  color: #000;
+}
+.port-folio-item .img-box {
+  width: 600px;
+  height: 360px;
+  overflow: hidden;
+}
+.port-folio-item .img-box img {
+  width: 100%;
+  height: auto;
+}
+.port-folio-item .img-box + .title-box {
+  margin-top: 12px;
+}
+.port-folio-item .title-box {
+  width: 600px;
+}
+.port-folio-item .title-box .year {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  opacity: 0.5;
+}
+.port-folio-item .title-box .title {
+  display: block;
+  height: 70px;
+  font-size: 26px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.port-folio-item .category-box {
+  width: 600px;
+}
+.port-folio-item .category-box .category {
+  padding: 0 10px;
+  font-size: 12px;
+  display: inline-block;
+  font-weight: 800;
+  border: 2px solid #adadad;
+  border-radius: 12px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+.port-folio-item .category-box .category + .category {
+  margin-left: 6px;
+}
+
+/* ------------------------------------------------------------
+타이틀 팩
+------------------------------------------------------------ */
+.title-pack {
+  margin: 0 auto 130px;
+  padding-top: 100px;
+  min-height: 151px;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+.title-pack .sub-txt {
+  font-size: 20px;
+}
+.title-pack .tit-txt {
+  font-size: 48px;
+  font-weight: 700;
+}
+.title-pack .tit-txt + .btn-request {
+  margin-top: 20px;
+}
+
+/* ------------------------------------------------------------
+리퀘스트 버튼 스타일 지정
+------------------------------------------------------------ */
+.o-btn {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.btn-request {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 10px 20px 20px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 3px;
+  border: 1px solid #6f70ea;
+  transition: all 0.5s;
+}
+.btn-request .text {
+  width: auto;
+}
+.btn-request .icon {
+  color: #6f70ea;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  font-size: 15px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+/* ------------------------------------------------------------
+포트폴리오 탭 리스트 스타일
+------------------------------------------------------------ */
+.tab-list-wrap {
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.tab-list {
+  display: flex;
+  justify-content: center;
+}
+.tab-list .tab-item {
+  position: relative;
+  width: auto;
+  line-height: 1.5;
+  padding: 15px 30px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #aaa;
+  text-align: center;
+  vertical-align: -webkit-baseline-middle;
+  vertical-align: middle;
+}
+.tab-list .tab-item::after {
+  display: inline-block;
+  content: "";
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 2px;
+  height: 10px;
+  background-color: #ccc;
+}
+.tab-list li:nth-child(1) .tab-item::after {
+  display: none;
 }

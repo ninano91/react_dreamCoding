@@ -1,16 +1,16 @@
 import React from 'react';
+import AllCardList from './AllCardList';
+import TitleWrap from '../components/layout/TitleWrap';
+import PortfolioTab from '../components/tab/PortfolioTab';
 
 export default function korean() {
     return (
         <div>
-            한글
-            <br />
-            한글
-            <br />
-            한글
-            <br />
-            한글
-            <br />
+            <TitleWrap />
+            <div className="list-area">
+                <PortfolioTab />
+                <AllCardList />
+            </div>
         </div>
     );
 }
