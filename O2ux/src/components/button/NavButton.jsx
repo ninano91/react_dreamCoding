@@ -24,13 +24,11 @@ const rotateBtn = function () {
             gnbWrap.classList.add('on');
             body.classList.add('scrolltop');
             window.scrollTo(0, scrollTop);
-            console.log('ss');
         } else {
             this.classList.remove('close');
             gnbWrap.classList.remove('on');
             body.classList.remove('scrolltop');
             window.scrollTo(0, saveTop);
-            console.log('dd');
         }
         return;
     });

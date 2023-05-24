@@ -6,6 +6,9 @@ import NotFound from './pages/NotFound';
 import Korean from './pages/Korean';
 import Root from './pages/Root';
 import English from './pages/English';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import Story from './pages/Story';
 
 const router = createBrowserRouter([
     {
@@ -25,8 +28,22 @@ const router = createBrowserRouter([
                 path: '/english',
                 element: <English />,
             },
-            // { path: 'videos/:keyword', element: <Videos /> },
-            // { path: 'videos/watch/:videoId', element: <VideoDetail /> },
+            {
+                path: '/contact',
+                element: <Contact />,
+            },
+            {
+                path: '/about',
+                element: <About />,
+            },
+            {
+                path: '/story',
+                element: <Story />,
+            },
+            {
+                path: '/portfolio',
+                element: '',
+            },
         ],
     },
 ]);

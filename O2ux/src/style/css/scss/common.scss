@@ -10,11 +10,14 @@ body {
         overflow: hidden;
     }
 }
-
+.empty-page {
+    font-size: 60px;
+}
 .body-bg {
     width: 100%;
     min-height: 100vh;
     position: relative;
+    overflow: overlay;
 
     &::before {
         z-index: -1;
@@ -98,7 +101,8 @@ body {
                 margin: 0px 24px;
                 display: flex;
                 align-items: center;
-                &.on {
+
+                &.active {
                     color: #6921e0;
                 }
 
@@ -216,7 +220,8 @@ body {
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1260px;
+    width: 1260px;
+    min-height: 670px;
     margin: 0 auto;
 
     .port-folio-item:nth-child(2n) {
@@ -330,7 +335,6 @@ body {
         color: #6f70ea;
         width: 15px;
         height: 15px;
-        background-color: #fff;
         font-size: 15px;
         border-radius: 50%;
         margin: 0 10px;
@@ -372,12 +376,68 @@ body {
             height: 10px;
             background-color: #ccc;
         }
+        &.active {
+            color: #6921e0;
+        }
     }
 
     li:nth-child(1) {
         .tab-item {
             &::after {
                 display: none;
+            }
+        }
+    }
+}
+
+.content-wrap {
+    nav {
+        .right {
+            .gnb-wrap {
+                padding-top: 150px;
+
+                .gnb-wrap-top {
+                    border-top: 1px solid #ffffff7c;
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .gnb-item + .gnb-item {
+                    margin-top: 40px;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    padding-left: 300px;
+                    width: 470px;
+                    height: 70px;
+                    line-height: 70px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: 300;
+                    box-sizing: border-box;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+                .footer-item {
+                    padding-top: 40px;
+                    padding-left: 40px;
+                    padding-right: 20px;
+                    width: 590px;
+                    box-sizing: border-box;
+                    & + dl {
+                        margin-top: 88px;
+                    }
+
+                    dt {
+                    }
+                    dd {
+                        margin-top: 14px;
+                        color: #fff;
+                        opacity: 0.5;
+                    }
+                }
             }
         }
     }

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-// import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 import NavButton from './button/NavButton';
 // import GnbWrap from './layout/GnbWrap';
 
@@ -11,45 +10,32 @@ import NavButton from './button/NavButton';
 // 해결하기 위해서는 rotateBtn 함수를 Navbar 컴포넌트 외부로 이동시키고,
 // 함수를 한 번만 생성하도록 수정
 
-// const rotateBtn = function () {
-//     let scrollTop, saveTop;
-//     const btnMenu = document.querySelector('.btn-menu');
-//     const gnbWrap = document.querySelector('.gnb-wrap');
-//     // const body = document.querySelector('body');
-
-//     btnMenu.addEventListener('click', function () {
-//         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//         if (!this.classList.contains('close')) {
-//             saveTop = scrollTop;
-//             this.classList.add('close');
-//             gnbWrap.classList.add('on');
-//             // body.classList.add('scrolltop');
-//             window.scrollTo(0, scrollTop);
-//             console.log('ss');
-//         } else {
-//             this.classList.remove('close');
-//             gnbWrap.classList.remove('on');
-//             // body.classList.remove('scrolltop');
-//             window.scrollTo(0, saveTop);
-//             console.log('dd');
-//         }
-//         return;
-//     });
-// };
-
 export default function Navbar() {
     // useEffect(() => {
     //     rotateBtn(); // rotateBtn 함수를 한 번만 호출
     // }, []);
+    const location = useLocation();
 
     return (
         <nav>
             <div className="left">
-                <h2 className="main-logo"></h2>
+                <h2 className="main-logo">
+                    <span></span>
+                </h2>
             </div>
             <div className="right">
-                <Link to="/Korean">Kor</Link>
-                <Link to="/English">Eng</Link>
+                <Link
+                    to="/Korean"
+                    className={classNames(location.pathname === '/Korean' && 'active')}
+                >
+                    Kor
+                </Link>
+                <Link
+                    to="/English"
+                    className={classNames(location.pathname === '/English' && 'active')}
+                >
+                    Eng
+                </Link>
                 <NavButton />
             </div>
         </nav>
