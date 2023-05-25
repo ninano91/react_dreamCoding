@@ -9,6 +9,7 @@ import English from './pages/English';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Story from './pages/Story';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
     {
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Korean />,
+                element: <Home />,
+            },
+            {
+                path: '/home',
+                element: <Home />,
             },
             {
                 path: '/korean',

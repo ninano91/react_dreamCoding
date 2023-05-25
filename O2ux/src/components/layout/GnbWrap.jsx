@@ -11,9 +11,7 @@ export default function GnbWrap() {
         const gnbWrap = document.querySelector('.gnb-wrap');
         btnMenu.classList.remove('close');
         gnbWrap.classList.remove('on');
-        gnbWrap.classList.remove('on');
-        // setIsOpen(!isOpen);
-        // 렌더 방식때문에 두번 눌러야함... 수정할 것
+        setIsOpen();
     };
 
     return (

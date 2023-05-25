@@ -4350,7 +4350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.3.2":
+"classnames@npm:^2.2.5, classnames@npm:^2.3.2":
   version: 2.3.2
   resolution: "classnames@npm:2.3.2"
   checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
@@ -5058,7 +5058,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge@npm:^4.2.2":
+"deepmerge@npm:^4.0.0, deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
   checksum: 2024c6a980a1b7128084170c4cf56b0fd58a63f2da1660dcfe977415f27b17dbe5888668b59d0b063753f3220719d5e400b7f113609489c90160bb9a5518d052
@@ -5428,6 +5428,13 @@ __metadata:
     graceful-fs: ^4.2.4
     tapable: ^2.2.0
   checksum: fff1aaebbf376371e5df4502e111967f6247c37611ad3550e4e7fca657f6dcb29ef7ffe88bf14e5010b78997f1ddd984a8db97af87ee0a5477771398fd326f5b
+  languageName: node
+  linkType: hard
+
+"enquire.js@npm:^2.1.6":
+  version: 2.1.6
+  resolution: "enquire.js@npm:2.1.6"
+  checksum: bb094054ee2768edafc3b80fb2b65b79d63160d625085162e9c9016843b6eaa13d7430201bf593c2e31e1725b3208f47f57aa27e03b19729e7590d1ca2241451
   languageName: node
   linkType: hard
 
@@ -8305,6 +8312,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json2mq@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "json2mq@npm:0.2.0"
+  dependencies:
+    string-convert: ^0.2.0
+  checksum: 5672c3abdd31e21a0e2f0c2688b4948103687dab949a1c5a1cba98667e899a96c2c7e3d71763c4f5e7cd7d7c379ea5dd5e1a9b2a2107dd1dfa740719a11aa272
+  languageName: node
+  linkType: hard
+
 "json5@npm:^1.0.2":
   version: 1.0.2
   resolution: "json5@npm:1.0.2"
@@ -8440,6 +8456,13 @@ __metadata:
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
+  languageName: node
+  linkType: hard
+
+"load-script@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "load-script@npm:1.0.0"
+  checksum: 8458e3f07b4a86f8d9d66e47a987811491a5d013af23ba7b371c6d3c9dc899885b072ccf65abf7874c10cb197d4975eacd8a7a125bfb38dbbcb267539f5dc1e9
   languageName: node
   linkType: hard
 
@@ -8670,6 +8693,13 @@ __metadata:
   dependencies:
     fs-monkey: ^1.0.3
   checksum: fcd037566a4bbb00d61dc991858395ccc06267ab5fe9471aeff28433f2a210bf5dd999e64e8b5473f8244f00dfb7ff3221b5c2fe41ff98af1439e5e2168fc410
+  languageName: node
+  linkType: hard
+
+"memoize-one@npm:^5.1.1":
+  version: 5.2.1
+  resolution: "memoize-one@npm:5.2.1"
+  checksum: a3cba7b824ebcf24cdfcd234aa7f86f3ad6394b8d9be4c96ff756dafb8b51c7f71320785fbc2304f1af48a0467cbbd2a409efc9333025700ed523f254cb52e3d
   languageName: node
   linkType: hard
 
@@ -9117,8 +9147,11 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.8.0
+    react-player: ^2.12.0
     react-router-dom: ^6.11.2
     react-scripts: 5.0.1
+    react-slick: ^0.29.0
+    slick-carousel: ^1.8.1
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -10493,7 +10526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10660,6 +10693,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.0.1":
+  version: 3.2.2
+  resolution: "react-fast-compare@npm:3.2.2"
+  checksum: 2071415b4f76a3e6b55c84611c4d24dcb12ffc85811a2840b5a3f1ff2d1a99be1020d9437ee7c6e024c9f4cbb84ceb35e48cf84f28fcb00265ad2dfdd3947704
+  languageName: node
+  linkType: hard
+
 "react-icons@npm:^4.8.0":
   version: 4.8.0
   resolution: "react-icons@npm:4.8.0"
@@ -10687,6 +10727,21 @@ __metadata:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
+  languageName: node
+  linkType: hard
+
+"react-player@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "react-player@npm:2.12.0"
+  dependencies:
+    deepmerge: ^4.0.0
+    load-script: ^1.0.0
+    memoize-one: ^5.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.0.1
+  peerDependencies:
+    react: ">=16.6.0"
+  checksum: 77d3e55ed67cd9c1e2300a990d8015d270072daad41f8a0750c32748f3fbfbc5bd2a2f06e78ac6828c2260b84537b9571d0abac31d3e888b74a3dccb59a56365
   languageName: node
   linkType: hard
 
@@ -10785,6 +10840,22 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 92afa2f245c7092ccc97d5609dc7a2130616262e34da7f15072d9442e2d2e1d4909a91022abd1faac1336eb17c5525a10d9bd43e1ae374c7ec941ca20addca68
+  languageName: node
+  linkType: hard
+
+"react-slick@npm:^0.29.0":
+  version: 0.29.0
+  resolution: "react-slick@npm:0.29.0"
+  dependencies:
+    classnames: ^2.2.5
+    enquire.js: ^2.1.6
+    json2mq: ^0.2.0
+    lodash.debounce: ^4.0.8
+    resize-observer-polyfill: ^1.5.0
+  peerDependencies:
+    react: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 67ce4981914da8a76c6efb4bc8ee7ab69e04c33bd4b3517419ab2165679a3c701dae781556149713fe2c542f84188b7ca101ea58883537be5c05756408f48c8b
   languageName: node
   linkType: hard
 
@@ -10973,6 +11044,13 @@ __metadata:
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
   checksum: eee0e303adffb69be55d1a214e415cf42b7441ae858c76dfc5353148644f6fd6e698926fc4643f510d5c126d12a705e7c8ed7e38061113bdf37547ab356797ff
+  languageName: node
+  linkType: hard
+
+"resize-observer-polyfill@npm:^1.5.0":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
   languageName: node
   linkType: hard
 
@@ -11479,6 +11557,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slick-carousel@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "slick-carousel@npm:1.8.1"
+  peerDependencies:
+    jquery: ">=1.8.0"
+  checksum: acaad391e4d8bc1c7fdb8d361faa1f1d60829b31d618b54bc38c0550a59b26de36537e0ab4bc0364176ec11d1a61d0cf11e99d8d5b1285d656673c9a1a719257
+  languageName: node
+  linkType: hard
+
 "smart-buffer@npm:^4.2.0":
   version: 4.2.0
   resolution: "smart-buffer@npm:4.2.0"
@@ -11671,6 +11758,13 @@ __metadata:
   dependencies:
     internal-slot: ^1.0.4
   checksum: d04173690b2efa40e24ab70e5e51a3ff31d56d699550cfad084104ab3381390daccb36652b25755e420245f3b0737de66c1879eaa2a8d4fc0a78f9bf892fcb42
+  languageName: node
+  linkType: hard
+
+"string-convert@npm:^0.2.0":
+  version: 0.2.1
+  resolution: "string-convert@npm:0.2.1"
+  checksum: 1098b1d8e3712c72d0a0b0b7f5c36c98af93e7660b5f0f14019e41bcefe55bfa79214d5e03e74d98a7334a0b9bf2b7f4c6889c8c24801aa2ae2f9ebe1d8a1ef9
   languageName: node
   linkType: hard
 

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import NavButton from './button/NavButton';
-// import GnbWrap from './layout/GnbWrap';
+// import Home from '../pages/Home';
 
 // 컴포넌트 내부에 함수를 불러서 실행할 경우,
 // 함수가 btn-menu 버튼의 click 이벤트에 대해 매번 등록되기 때문에
@@ -19,9 +19,10 @@ export default function Navbar() {
     return (
         <nav>
             <div className="left">
-                <h2 className="main-logo">
+                {/* <h2 className="main-logo">
                     <span></span>
-                </h2>
+                </h2> */}
+                <Link to="../Home" className="main-logo"></Link>
             </div>
             <div className="right">
                 <Link

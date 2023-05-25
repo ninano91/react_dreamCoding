@@ -15,6 +15,7 @@ const rotateBtn = function () {
     const btnMenu = document.querySelector('.btn-menu');
     const gnbWrap = document.querySelector('.gnb-wrap');
     const body = document.querySelector('body');
+    const mainSlide = document.querySelector('.main-slide-container');
 
     btnMenu.addEventListener('click', function () {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -22,11 +23,13 @@ const rotateBtn = function () {
             saveTop = scrollTop;
             this.classList.add('close');
             gnbWrap.classList.add('on');
+            mainSlide.classList.add('hide');
             body.classList.add('scrolltop');
             window.scrollTo(0, scrollTop);
         } else {
             this.classList.remove('close');
             gnbWrap.classList.remove('on');
+            mainSlide.classList.remove('hide');
             body.classList.remove('scrolltop');
             window.scrollTo(0, saveTop);
         }
