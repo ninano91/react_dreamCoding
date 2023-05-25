@@ -19,8 +19,8 @@ export default function HomeBg() {
             <ReactPlayer
                 url="/video/main.mp4"
                 className="video-bg"
-                width="auto"
-                height="100vh"
+                width="100%"
+                height="auto"
                 loop={true}
                 playing={isPlayerReady} // useEffect 동영상이 준비되었을 때에만 재생
                 onReady={() => {}} //useEffect 비어있음
