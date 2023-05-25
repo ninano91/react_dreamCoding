@@ -38,7 +38,7 @@ const rotateBtn = function () {
 };
 export default function NavButton() {
     useEffect(() => {
-        rotateBtn(); // rotateBtn 함수를 한 번만 호출
+        rotateBtn(); // 여기에서 rotateBtn 함수 호출
     }, []);
 
     return (

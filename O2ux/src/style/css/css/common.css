@@ -398,7 +398,7 @@ body.scrolltop {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   opacity: 1;
-  transition: all 0.3 linear;
+  transition: all 0.6s linear;
 }
 .main-slide-container.hide {
   opacity: 0;
