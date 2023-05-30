@@ -498,3 +498,23 @@ body {
         }
     }
 }
+.ex-box {
+    position: absolute;
+    display: block;
+    color: #ffff;
+    z-index: 20;
+    background-color: black;
+    width: 500px;
+    height: 300px;
+}
+button.exBtn {
+    display: block;
+    color: #ffff;
+    z-index: 10;
+    background-color: #6921e0;
+    margin: 20px;
+    padding: 10px;
+    .empty-page {
+        padding: 20px;
+    }
+}
