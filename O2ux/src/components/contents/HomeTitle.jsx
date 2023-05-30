@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useRecoilState } from "recoil";
+import { langState } from "../../utils/atom";
 
-export default function HomeTitle({ language, onLanguageChange }) {
+export default function HomeTitle() {
     const settings = {
         fade: true,
         infinite: true,
@@ -15,51 +17,65 @@ export default function HomeTitle({ language, onLanguageChange }) {
         arrows: false,
     };
 
-    const [currentLanguage, setCurrentLanguage] = useState(language);
+    const [lang, setLang] = useRecoilState(langState);
 
-    useEffect(() => {
-        setCurrentLanguage(language);
-    }, [language]);
-
-    const handleLanguageChange = (selectedLanguage) => {
-        setCurrentLanguage(selectedLanguage); // 언어 변경 시 상태 업데이트
-        if (typeof onLanguageChange === 'function') {
-            onLanguageChange(selectedLanguage);
-        }
-    };
-
-    const getContent = () => {
-        switch (currentLanguage) {
-            case 'Eng':
-                console.log('어느 언어일까:', currentLanguage);
-                return (
-                    <>
-                        <span className="sup">유용하고 사용하기 쉽고 생산적인</span>
-                        <strong className="tit">
-                            커뮤니케이션과 연결을 통해 일관된 경험을 구현합니다 <br />
-                        </strong>
-                    </>
-                );
-            case 'Kor':
-            default:
-                console.log('어느 언어일까:', currentLanguage);
-                return (
-                    <>
-                        <span className="sup">전략가, 디자이너 및 엔지니어</span>
-                        <strong className="tit">
-                            우리는 냉철함과 따뜻한 시선을 가진 <br />
-                            '경험' 전문가입니다
-                        </strong>
-                    </>
-                );
-        }
-    };
+    // const langChange = () => {
+    //     setLang((prevLang) => (prevLang === "한국어" ? "English" : "한국어"));
+    // };
 
     return (
         <div className="main-slide-container">
-            <Slider {...settings} className="text-slide">
-                <div className="text-slide-item">{getContent()}</div>
-            </Slider>
+            {lang === "한국어" ? (
+                <Slider {...settings} className="text-slide">
+                    <div className="text-slide-item">
+                        <span className="sup">Strategists, Designers & Engineers</span>
+                        <strong className="tit">
+                            우리는 냉철함과 따뜻한 시선을 가진 <br />
+                            ‘경험’ 전문가입니다
+                        </strong>
+                    </div>
+                    <div className="text-slide-item">
+                        <span className="sup">Usefumain-slide-l, Usable & Empowering</span>
+                        <strong className="tit">
+                            사람의 커뮤니케이션과 <br />
+                            가까운 방식으로 일관된 <br />
+                            경험을 구현합니다
+                        </strong>
+                    </div>
+                    <div className="text-slide-item">
+                        <span className="sup">Strategize, Visualize & Systematize</span>
+                        <strong className="tit">
+                            공기처럼 느껴지지 않지만 <br />
+                            모든 분야에서 필요한 UX의 가치를 실현합니다
+                        </strong>
+                    </div>
+                </Slider>
+            ) : (
+                <Slider {...settings} className="text-slide">
+                    <div className="text-slide-item">
+                        <span className="sup">1Strategists, Designers & Engineers</span>
+                        <strong className="tit">
+                            We strive to create digital experience <br />
+                            in the way people communicate
+                        </strong>
+                    </div>
+                    <div className="text-slide-item">
+                        <span className="sup">1Usefumain-slide-l, Usable & Empowering</span>
+                        <strong className="tit">
+                            We are ‘experience’ specialists with <br />
+                            cool-headed intuition and <br />
+                            warm-hearted reasoning
+                        </strong>
+                    </div>
+                    <div className="text-slide-item">
+                        <span className="sup">1Strategize, Visualize & Systematize</span>
+                        <strong className="tit">
+                            We deliver strong and impactful value <br />
+                            of UX like Oxygen in the air
+                        </strong>
+                    </div>
+                </Slider>
+            )}
         </div>
     );
 }

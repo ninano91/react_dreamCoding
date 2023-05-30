@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ReactPlayer from 'react-player';
+import React, { useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function HomeBg() {
     const [readyVideo, setReadyVideo] = useState(true);
@@ -13,8 +13,9 @@ export default function HomeBg() {
             <ReactPlayer
                 url="/video/main.mp4"
                 className="video-bg"
-                width="100%"
-                height="auto"
+                width="auto"
+                height="100vh"
+                // min-height="100%"
                 loop={true}
                 muted={true} // 자동 재생 이슈
                 playing={readyVideo} // useState //동영상이 준비되었을 때에만 재생

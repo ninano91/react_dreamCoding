@@ -1,11 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import NavButton from './button/NavButton';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { langState } from "../utils/atom";
 
-export default function Navbar({ language, onLanguageChange }) {
-    const handleLanguageClick = (selectedLanguage) => {
-        if (typeof onLanguageChange === 'function') {
-            onLanguageChange(selectedLanguage);
+export default function Navbar() {
+    const [lang, setLang] = useRecoilState(langState);
+    const [activeButton, setActiveButton] = useState("Kor");
+
+    const langChange = (selectedLang) => {
+        if (selectedLang !== activeButton) {
+            setLang((prevLang) => (prevLang === "한국어" ? "English" : "한국어"));
+            setActiveButton(selectedLang);
         }
     };
 
@@ -15,9 +20,12 @@ export default function Navbar({ language, onLanguageChange }) {
                 <Link to="../Home" className="main-logo"></Link>
             </div>
             <div className="right">
-                <button onClick={() => handleLanguageClick('Kor')}>Kor</button>
-                <button onClick={() => handleLanguageClick('Eng')}>Eng</button>
-                <NavButton />
+                <button onClick={() => langChange("Kor")} disabled={activeButton === "Kor"}>
+                    Kor
+                </button>
+                <button onClick={() => langChange("Eng")} disabled={activeButton === "Eng"}>
+                    Eng
+                </button>
             </div>
         </nav>
     );
