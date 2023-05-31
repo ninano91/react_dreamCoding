@@ -385,13 +385,16 @@ body.scrolltop {
   position: fixed;
   top: 0;
   left: 0;
-  width: unset !important;
-  height: unset !important;
-  min-width: 100% !important;
-  min-height: 100% !important;
+  width: auto !important;
+  height: 100% !important;
   z-index: 5;
   background-color: #000;
 }
+.video-bg video {
+  width: auto !important;
+  height: 100% !important;
+}
+
 .main-slide-container {
   position: relative;
   top: 0%;
@@ -518,6 +521,7 @@ button.exBtn .empty-page {
 .home-slide .scroll-full-page.on .scroll-slide-container .scroll-slide-item:last-child {
   margin-right: 200px;
 }
+
 .ico_scroll {
   position: fixed;
   width: 24px;

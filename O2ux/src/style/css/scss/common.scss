@@ -455,13 +455,15 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: unset !important;
-    height: unset !important;
-    min-width: 100% !important;
-    min-height: 100% !important;
+    width: auto !important;
+    height: 100% !important;
+    // min-width: auto !important;
+    // min-height: 100vh !important;
     z-index: 5;
     background-color: #000;
     video {
+        width: auto !important;
+        height: 100% !important;
     }
 }
 
@@ -581,10 +583,6 @@ button.exBtn {
                 border-radius: 10px;
             }
 
-            &::-webkit-scrollbar-track {
-                // background: rgba(33, 122, 244, 0.1); /*스크롤바 뒷 배경 색상*/
-            }
-
             .scroll-slide-item {
                 flex: 0 0 auto;
                 width: 540px;
@@ -598,9 +596,6 @@ button.exBtn {
                 &:last-child {
                     margin-right: 200px;
                 }
-            }
-
-            .slick-slide {
             }
         }
     }
