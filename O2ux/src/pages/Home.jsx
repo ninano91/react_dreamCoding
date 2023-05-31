@@ -1,20 +1,57 @@
-import React, { useState } from "react";
-import HomeBg from "../components/layout/HomeBg";
-import HomeTitle from "../components/contents/HomeTitle";
-import HomeEx from "../components/contents/HomeEx";
+import React, { useRef } from 'react';
+import HomeBg from '../components/layout/HomeBg';
+import HomeTitle from '../components/contents/HomeTitle';
+import HomeScrollpage from './HomeScrollpage';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Home() {
-    const [language, setLanguage] = useState("Kor");
+    const sliderRef = useRef(null);
 
-    const handleLanguageChange = (selectedLanguage) => {
-        setLanguage(selectedLanguage);
-        console.log("Selected Language:", selectedLanguage);
+    const handleWheel = (e) => {
+        e.preventDefault();
+        const slider = sliderRef.current;
+        const deltaY = e.deltaY;
+        console.log(e.deltaY);
+        if (deltaY > 150) {
+            slider.slickPrev();
+        } else {
+            slider.slickNext();
+        }
+    };
+    const settings = {
+        fade: true,
+        infinite: false,
+        autoplay: false,
+        speed: 100,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: true,
+        arrows: true,
     };
 
     return (
-        <div>
+        <div onWheel={handleWheel}>
             <HomeBg />
-            <HomeTitle language={language} onLanguageChange={handleLanguageChange} />
+            <Slider {...settings} ref={sliderRef} className="home-slide">
+                <HomeTitle />
+                <HomeScrollpage />
+            </Slider>
+            <div class="ico_scroll">
+                <span></span>
+            </div>
+            <div class="bot_info">
+                <p class="copyright">2020 ⓒO2UX All Rights Reserved</p>
+                <a
+                    href="../../content/pdf/O2UX_Company_Profile_2022.pdf"
+                    target="_blank"
+                    class="company"
+                    download=""
+                >
+                    {/* <i class="far fa-file-pdf"></i>COMPANY PROFILE */}
+                </a>
+            </div>
         </div>
     );
 }

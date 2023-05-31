@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Korean from './pages/Korean';
 import Root from './pages/Root';
-import English from './pages/English';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Story from './pages/Story';
@@ -26,12 +25,8 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: '/korean',
+                path: '/portfolio',
                 element: <Korean />,
-            },
-            {
-                path: '/english',
-                element: <English />,
             },
             {
                 path: '/contact',
@@ -44,10 +39,6 @@ const router = createBrowserRouter([
             {
                 path: '/story',
                 element: <Story />,
-            },
-            {
-                path: '/portfolio',
-                element: '',
             },
         ],
     },

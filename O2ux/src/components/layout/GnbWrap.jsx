@@ -24,7 +24,7 @@ export default function GnbWrap() {
                         </Link>
                     </div>
                     <div className="gnb-item">
-                        <Link to="../../Korean" onClick={toggleWrap}>
+                        <Link to="../../Portfolio" onClick={toggleWrap}>
                             Portfolio
                         </Link>
                     </div>

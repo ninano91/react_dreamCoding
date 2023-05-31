@@ -1,6 +1,14 @@
 import React from 'react';
-import Root from './Root';
+import AllCardList from './AllCardList';
+import TitleWrap from '../components/layout/TitleWrap';
 
 export default function PortFolio() {
-    return <Root />;
+    return (
+        <div>
+            <TitleWrap />
+            <div className="list-area">
+                <AllCardList />
+            </div>
+        </div>
+    );
 }

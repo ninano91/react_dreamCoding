@@ -1,9 +1,9 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { useRecoilState } from "recoil";
-import { langState } from "../../utils/atom";
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useRecoilState } from 'recoil';
+import { langState } from '../../utils/atom';
 
 export default function HomeTitle() {
     const settings = {
@@ -25,7 +25,7 @@ export default function HomeTitle() {
 
     return (
         <div className="main-slide-container">
-            {lang === "한국어" ? (
+            {lang === '한국어' ? (
                 <Slider {...settings} className="text-slide">
                     <div className="text-slide-item">
                         <span className="sup">Strategists, Designers & Engineers</span>
@@ -35,7 +35,9 @@ export default function HomeTitle() {
                         </strong>
                     </div>
                     <div className="text-slide-item">
-                        <span className="sup">Usefumain-slide-l, Usable & Empowering</span>
+                        <span className="sup">
+                            Usefumain-slide-l, Usable & Empowering
+                        </span>
                         <strong className="tit">
                             사람의 커뮤니케이션과 <br />
                             가까운 방식으로 일관된 <br />
@@ -53,14 +55,16 @@ export default function HomeTitle() {
             ) : (
                 <Slider {...settings} className="text-slide">
                     <div className="text-slide-item">
-                        <span className="sup">1Strategists, Designers & Engineers</span>
+                        <span className="sup">Strategists, Designers & Engineers</span>
                         <strong className="tit">
                             We strive to create digital experience <br />
                             in the way people communicate
                         </strong>
                     </div>
                     <div className="text-slide-item">
-                        <span className="sup">1Usefumain-slide-l, Usable & Empowering</span>
+                        <span className="sup">
+                            Usefumain-slide-l, Usable & Empowering
+                        </span>
                         <strong className="tit">
                             We are ‘experience’ specialists with <br />
                             cool-headed intuition and <br />
@@ -68,7 +72,7 @@ export default function HomeTitle() {
                         </strong>
                     </div>
                     <div className="text-slide-item">
-                        <span className="sup">1Strategize, Visualize & Systematize</span>
+                        <span className="sup">Strategize, Visualize & Systematize</span>
                         <strong className="tit">
                             We deliver strong and impactful value <br />
                             of UX like Oxygen in the air
