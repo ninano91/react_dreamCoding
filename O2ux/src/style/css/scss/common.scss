@@ -459,11 +459,26 @@ body {
     height: 100% !important;
     // min-width: auto !important;
     // min-height: 100vh !important;
+    // background: linear-gradient(to bottom, #1e2a66, #171739);
+
     z-index: 5;
-    background-color: #000;
     video {
         width: auto !important;
         height: 100% !important;
+        min-width: 100vw !important;
+        background-color: #0c0b15;
+        // 사이즈가 늘어나지 않는 이슈 있음 임의로 배경처리 함
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        // background-color: #171739;
     }
 }
 
